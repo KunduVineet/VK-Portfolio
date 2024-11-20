@@ -1,6 +1,6 @@
 import React from "react";
 import { FaCss3, FaHtml5, FaJava, FaReact, FaAndroid } from "react-icons/fa"; // Import Java icon
-import { SiFirebase } from 'react-icons/si';
+import { SiFirebase } from "react-icons/si";
 
 const Skills = () => {
   const skills = [
@@ -26,7 +26,8 @@ const Skills = () => {
       id: 4,
       icon: <FaAndroid className="text-green-600" />,
       title: "Android",
-      topics: "Basics, Android Native, Android X, XML, Activities, Fragments, RecyclerView, Firebase Integration",
+      topics:
+        "Basics, Android Native, Android X, XML, Activities, Fragments, RecyclerView, Firebase Integration",
     },
     {
       id: 5,
@@ -54,11 +55,11 @@ const Skills = () => {
         Skills
       </h2>
       <div className="max-w-4xl mx-auto ml-5 gap-6 p-5 px-4">
-        <div className="space-y-4">
+        <div className="space-y-4 ">
           {skills.map((item) => (
             <div
               key={item.id}
-              className="flex items-center  bg-darkGray p-4 rounded-lg shadow hover:shadow-lg transition"
+              className="flex items-center bg-darkGray p-4 rounded-lg shadow hover:shadow-lg transition-transform duration-300 hover:scale-105 hover:animate-bounce-slow"
             >
               <div className="text-3xl text-blue-500 mr-4">{item.icon}</div>
               <div>

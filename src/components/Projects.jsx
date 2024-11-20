@@ -60,12 +60,12 @@ const Projects = () => {
         <>
             <h2 className="text-3xl font-bold text-left mb-6 text-colorhead gap-6 px-4 animate-slide-in">Projects</h2>
 
-            <div className="flex flex-wrap ml-5 gap-6 p-5 px-4 text-colorhead">
+            <div className="flex flex-wrap ml-5 gap-6 p-5 px-4 text-colorhead ">
                 {techProjects.map((project) => (
                     <div
                         key={project.id}
                         onClick={() => handleItemClick(project.link)}
-                        className="border rounded-lg shadow-lg hover:shadow-xl transition-shadow p-4 w-72 cursor-pointer bg-darkGray "
+                        className="border rounded-lg shadow-lg hover:bg-colorhead hover:shadow-xl hover:scale-105 transition-shadow p-4 w-72 cursor-pointer bg-darkGray animate-flip-in"
                     >
                         <img
                             src={project.image}

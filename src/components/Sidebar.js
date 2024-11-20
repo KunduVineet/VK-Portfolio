@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Links from './Links';
+import React, { useState, useEffect } from "react";
+import Links from "./Links";
+import ProfileImage from "./profileImage";
 
 const ProgressBar = ({ label, progress, color }) => {
   const [currentProgress, setCurrentProgress] = useState(0);
@@ -39,38 +40,45 @@ const ProgressBar = ({ label, progress, color }) => {
 
 const Sidebar = () => {
   const skills = [
-    { label: 'HTML', progress: 100, color: '#f59e0b' },
-    { label: 'CSS', progress: 95, color: '#f59e0b' },
-    { label: 'Java', progress: 70, color: '#f59e0b' },
-    { label: 'React.js', progress: 80, color: '#f59e0b' },
-    { label: 'JS', progress: 80, color: '#f59e0b' },
-    { label: 'Android', progress: 75, color: '#f59e0b' },
-    { label: 'Spring', progress: 40, color: '#f59e0b' },
+    { label: "HTML", progress: 100, color: "#f59e0b" },
+    { label: "CSS", progress: 95, color: "#f59e0b" },
+    { label: "Java", progress: 70, color: "#f59e0b" },
+    { label: "React.js", progress: 80, color: "#f59e0b" },
+    { label: "JS", progress: 80, color: "#f59e0b" },
+    { label: "Android", progress: 75, color: "#f59e0b" },
+    { label: "Spring", progress: 40, color: "#f59e0b" },
+  ];
+  const info = [
+    { label: "Residence", value: "India" },
+    { label: "City", value: "Gurgaon" },
+    { label: "Age", value: "21" },
   ];
 
   return (
     <div className="p-6 bg-blackish w-[650px]">
       {/* Profile Section */}
-      <div className="text-center mb-6 py-3 bg-darkGray">
-        <div className="w-24 h-24 mx-auto rounded-full overflow-hidden border-2 border-gray-300">
-          <img src="./Vineet-Latest.svg" alt="Vineet Kundu" className="w-full h-full object-cover" />
+      <div className="text-center mb-6 py-3 bg-darkGray rounded-lg shadow-md">
+        <div className="w-24 h-24 mx-auto">
+          <ProfileImage />
         </div>
-        <h2 className="text-lg font-semibold mt-4 text-colorhead">Vineet Kundu</h2>
+
+        <h2 className="text-lg font-semibold mt-4 text-colorhead">
+          Vineet Kundu
+        </h2>
         <p className="text-sm text-colorhead">Frontend Developer</p>
         <p className="text-sm text-colorhead">Java Developer</p>
         <Links />
       </div>
 
       {/* Info Section */}
-      <div className="text-sm bg-black py-3 px-2">
-        <div className="mb-2 text-colorhead">
-          <span className="font-semibold">Residence:</span> <span>India</span>
-        </div>
-        <div className="mb-2 text-colorhead">
-          <span className="font-semibold">City:</span> <span>Gurgaon</span>
-        </div>
-        <div className="mb-2 text-colorhead">
-          <span className="font-semibold">Age:</span> <span>21</span>
+      <div className="text-sm bg-black py-3 px-2 rounded-lg shadow-md">
+        <div className="flex flex-col gap-4 text-colorhead">
+          {info.map((item, index) => (
+            <div key={index}>
+              <span className="font-semibold">{item.label}:</span>{" "}
+              <span>{item.value}</span>
+            </div>
+          ))}
         </div>
       </div>
       <hr className="border-black my-4" />
