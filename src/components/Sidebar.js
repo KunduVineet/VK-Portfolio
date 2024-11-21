@@ -55,7 +55,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="p-6 bg-blackish w-[650px]">
+    <div className="p-6 bg-blackish w-[650px] overflow-hidden">
       {/* Profile Section */}
       <div className="text-center mb-6 py-3 bg-darkGray rounded-lg shadow-md">
         <div className="w-24 h-24 mx-auto">

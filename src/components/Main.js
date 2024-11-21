@@ -4,11 +4,9 @@ import Skills from './Skills';
 import Experience from './Experience';
 import About from './About';
 
-
-
 const Main = () => {
   return (
-   <div className=' bg-blackish '>
+   <div className=' bg-blackish overflow-auto'>
     <About />
     <Projects />
     <Skills />

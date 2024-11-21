@@ -3,17 +3,18 @@ import Typewriter from "typewriter-effect";
 
 const About = () => {
   return (
-    <div className="p-5 bg-gray-900 ">
-      <h2 className="text-4xl font-extrabold text-left mb-8 text-white px-4 animate-slide-in">
+    <>
+    
+    <h2 className="text-3xl font-bold text-left mb-6 text-colorhead gap-6 px-4 animate-slide-in my-4">
         About Me
       </h2>
-
+    <div className="p-5 bg-gray-900 ">
       <div className="flex flex-wrap gap-6 p-5 px-4 text-white">
         <div className="border border-gray-700 w-full rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-transform p-6 bg-gray-800 animate-flip-in">
           <div className="mb-6">
             <p className="text-xl text-gray-300 leading-relaxed mb-2">
               Hello! I am{" "}
-              <span className="text-colorhead  font-semibold">Vineet Kundu</span>.
+              <span className="text-colorhead font-semibold">Vineet Kundu</span>.
             </p>
 
             <div className="text-2xl font-medium text-colorhead leading-relaxed">
@@ -41,6 +42,7 @@ const About = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCss3, FaHtml5, FaJava, FaReact, FaAndroid } from "react-icons/fa"; // Import Java icon
+import { FaCss3, FaHtml5, FaJava, FaReact, FaAndroid } from "react-icons/fa";
 import { SiFirebase } from "react-icons/si";
 
 const Skills = () => {
@@ -43,7 +43,7 @@ const Skills = () => {
     },
     {
       id: 7,
-      icon: <SiFirebase className="text-yellow-500" />, // Firebase icon
+      icon: <SiFirebase className="text-yellow-500" />,
       title: "FireBase",
       topics: "Authentication, Firestore, Cloud Messaging, Hosting",
     },
