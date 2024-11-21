@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./index.html", 
-    "./src/**/*.{js,ts,jsx,tsx}" // Adjust based on your project structure
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}", // Adjust based on your project structure
   ],
   theme: {
     extend: {
@@ -27,6 +27,7 @@ module.exports = {
         wobble: "wobble 1s ease-in-out", // Wobble effect
         "flip-in": "flipIn 1s ease-out", // Flip-in animation
         "bounce-slow": "bounce-slow 1s ease-in-out infinite", // Slow bounce effect
+        "fade-in-scale": "fadeInScale 1s ease-out", // Smooth fade-in with scaling effect
       },
       // Keyframes for Custom Animations
       keyframes: {
@@ -48,6 +49,10 @@ module.exports = {
         "bounce-slow": {
           "0%, 100%": { transform: "translateY(8)" },
           "50%": { transform: "translateY(-5px)" },
+        },
+        fadeInScale: {
+          "0%": { transform: "scale(0.95)", opacity: 0 },
+          "100%": { transform: "scale(1)", opacity: 1 },
         },
       },
     },

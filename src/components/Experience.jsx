@@ -33,9 +33,9 @@ const Experience = () => {
         {experiences.map((exp) => (
           <div
             key={exp.id}
-            className="border rounded-lg shadow-lg hover:shadow-xl transition-shadow p-4 w-72 bg-darkGray animate-flip-in"
+            className="border rounded-lg shadow-lg hover:shadow-xl transition-shadow p-4 w-72 bg-darkGray animate-flip-in hover:scale-105"
           >
-            <div className="flex items-center gap-4 mb-4">
+            <div className="flex items-center gap-4 mb-4 ">
               <FaBriefcase className="text-colorhead text-2xl" />
               <div>
                 <h3 className="text-lg font-semibold text-white">{exp.role}</h3>
