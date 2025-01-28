@@ -3,7 +3,7 @@ import React from "react";
 const ProfileImage = () => {
   return (
     <div
-      className="relative w-24 h-24 mx-auto rounded-full overflow-hidden border-2 border-gray-300 transition-all duration-300 hover:"
+      className="order-1 relative w-24 h-24 mx-auto rounded-full overflow-hidden border-2 border-gray-300 transition-all duration-300 hover:"
     >
       {/* Main Image */}
       <img

@@ -14,7 +14,7 @@ const Links = () => {
     },
     {
       id: 3,
-      icon: <img src='./Mail.svg ' width="30px" height="30px" alt='Mail'/>,
+      icon: <img src='./Gmail.svg ' width="30px" height="30px" alt='Mail'/>,
       link: "mailto:kunduvineet6@gmail.com",
     },
     {
