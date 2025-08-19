@@ -1,5 +1,4 @@
-import React from "react";
-import { FaCss3, FaHtml5, FaJava, FaReact, FaAndroid } from "react-icons/fa";
+import { FaJava, FaReact, FaAndroid, FaCloud,FaDatabase } from "react-icons/fa";
 import { SiFirebase } from "react-icons/si";
 
 const Skills = () => {
