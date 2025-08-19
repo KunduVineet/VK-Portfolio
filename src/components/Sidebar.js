@@ -14,20 +14,20 @@ const ProgressBar = ({ label, progress, color }) => {
         }
         return prev + 1;
       });
-    }, 10); // Adjust the speed of the animation by changing the interval duration
+    }, 10);
 
-    return () => clearInterval(interval); // Cleanup interval on component unmount
+    return () => clearInterval(interval);
   }, [progress]);
 
   return (
-    <div className="mb-4">
-      <div className="flex justify-between mb-1">
-        <span className="text-sm font-medium">{label}</span>
-        <span className="text-sm font-medium">{currentProgress}%</span>
+    <div className="mb-6">
+      <div className="flex justify-between mb-2">
+        <span className="text-base font-medium sm:text-sm md:text-base text-gray-200">{label}</span>
+        <span className="text-base font-medium sm:text-sm md:text-base text-gray-200">{currentProgress}%</span>
       </div>
-      <div className="w-full bg-gray-200 rounded-full h-4">
+      <div className="w-full bg-gray-700 rounded-full h-3">
         <div
-          className="h-4 rounded-full"
+          className="h-3 rounded-full transition-all duration-500"
           style={{
             width: `${currentProgress}%`,
             backgroundColor: color,
@@ -39,15 +39,23 @@ const ProgressBar = ({ label, progress, color }) => {
 };
 
 const Sidebar = () => {
-  const skills = [
-    { label: "HTML", progress: 100, color: "#f59e0b" },
-    { label: "CSS", progress: 95, color: "#f59e0b" },
-    { label: "Java", progress: 70, color: "#f59e0b" },
-    { label: "React.js", progress: 80, color: "#f59e0b" },
-    { label: "JS", progress: 80, color: "#f59e0b" },
-    { label: "Android", progress: 75, color: "#f59e0b" },
-    { label: "Spring", progress: 40, color: "#f59e0b" },
-  ];
+const skills = [
+  { label: "Java 8", progress: 85, color: "#f59e0b" },
+  { label: "React.js", progress: 80, color: "#f59e0b" },
+  { label: "Spring Boot", progress: 80, color: "#f59e0b" },
+  { label: "Microservices", progress: 75, color: "#f59e0b" },
+  { label: "Cloud (AWS)", progress: 70, color: "#f59e0b" },
+  { label: "Docker", progress: 70, color: "#f59e0b" },
+  { label: "Kubernetes", progress: 65, color: "#f59e0b" },
+  { label: "Spring Security", progress: 70, color: "#f59e0b" },
+  { label: "Apache Kafka", progress: 65, color: "#f59e0b" },
+  { label: "Databases (MySQL, MongoDB, Redis, Neo4j, PostgreSQL)", progress: 75, color: "#f59e0b" },
+  { label: "System Design", progress: 70, color: "#f59e0b" },
+  { label: "RESTful APIs", progress: 80, color: "#f59e0b" },
+  { label: "JUnit/Mockito", progress: 70, color: "#f59e0b" },
+  { label: "Android", progress: 70, color: "#f59e0b" },
+];
+
   const info = [
     { label: "Residence", value: "India" },
     { label: "City", value: "Gurgaon" },
@@ -55,24 +63,21 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="p-6 bg-blackish w-[650px] overflow-hidden">
-      {/* Profile Section */}
-      <div className="text-center mb-6 py-3 bg-darkGray rounded-lg shadow-md">
-        <div className="w-24 h-24 mx-auto">
+    <div className="p-8 bg-gray-900 w-full sm:w-3/4 md:w-1/2 lg:w-1/4 overflow-hidden rounded-xl shadow-lg">
+      <div className="text-center mb-8 py-4 bg-gray-800 rounded-lg shadow-md">
+        <div className="w-28 h-28 mx-auto">
           <ProfileImage />
         </div>
 
-        <h2 className="text-lg font-semibold mt-4 text-colorhead">
+        <h2 className="text-xl font-semibold mt-4 text-colorhead sm:text-lg md:text-xl">
           Vineet Kundu
         </h2>
-        <p className="text-sm text-colorhead">Frontend Developer</p>
-        <p className="text-sm text-colorhead">Java Developer</p>
+        <p className="text-sm text-gray-300 sm:text-xs md:text-sm">Full Stack Java Developer</p>
         <Links />
       </div>
 
-      {/* Info Section */}
-      <div className="text-sm bg-black py-3 px-2 rounded-lg shadow-md">
-        <div className="flex flex-col gap-4 text-colorhead">
+      <div className="text-base bg-gray-800 py-4 px-3 rounded-lg shadow-md sm:text-sm md:text-base">
+        <div className="flex flex-col gap-4 text-gray-200">
           {info.map((item, index) => (
             <div key={index}>
               <span className="font-semibold">{item.label}:</span>{" "}
@@ -81,9 +86,9 @@ const Sidebar = () => {
           ))}
         </div>
       </div>
-      <hr className="border-black my-4" />
+      <hr className="border-gray-700 my-6" />
 
-      <div className="w-[calc(3.25/4*100%)] max-w-md text-white px-3">
+      <div className="w-full text-white px-3">
         {skills.map((skill, index) => (
           <ProgressBar
             key={index}
